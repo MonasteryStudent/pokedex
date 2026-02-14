@@ -2,7 +2,8 @@
   "name": "pokedex",
   "version": "1.0.0",
   "description": "This guided project is part of my backend-course on boot.dev. It's about building a Pokedex in a command-line REPL.",
-  "main": "index.js",
+  "main": "dist/main.js",
+  "type": "module",
   "scripts": {
     "test": "vitest --run",
     "build": "npx tsc",

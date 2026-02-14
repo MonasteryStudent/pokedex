@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "baseUrl": ".", // allows you to use paths relative to the project root
+    "baseUrl": ".",
     "target": "esnext",
     "module": "esnext",
-    "rootDir": "./src", // where TypeScript files are located
-    "outDir": "./dist", // where the compiled JavaScript files will go
-    "strict": true, // enables all strict type checking options
-    "moduleResolution": "Node", // specifies how modules are resolved
-    "esModuleInterop": true, // allows you to use ES module syntax
-    "skipLibCheck": true // skips type checking all declaration files
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "skipLibCheck": true
   },
-  "include": ["./src/**/*.ts"], // specifies the files to include in the compilation
-  "exclude": ["node_modules"] // specifies the files to exclude from the compilation
+  "include": ["./src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
