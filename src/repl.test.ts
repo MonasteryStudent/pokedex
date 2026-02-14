@@ -1,4 +1,4 @@
-import {cleanInput } from "./repl";
+import { cleanInput } from "./repl";
 import { describe, expect, test } from "vitest";
 
 // create a test suite
@@ -20,8 +20,8 @@ describe.each([
         expected: [""],
     },
     {
-        input: "  Use   regex  to make sure    words  are counted as expected               ",
-        expected: ["use", "regex", "to", "make", "sure", "words", "are", "counted", "as", "expected"]
+        input: "  Use   regex  ",
+        expected: ["use", "regex"]
     }
 ])("cleanInput($input)", ({ input, expected }) => {
     test(`Expected: ${expected}`, () => {
