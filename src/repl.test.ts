@@ -1,7 +1,6 @@
 import { cleanInput } from "./repl";
 import { describe, expect, test } from "vitest";
 
-// create a test suite
 describe.each([
     {
         input: " hello world ",
@@ -20,7 +19,7 @@ describe.each([
         expected: [""],
     },
     {
-        input: "  Use   regex  ",
+        input: "  Use  regex  ",
         expected: ["use", "regex"]
     }
 ])("cleanInput($input)", ({ input, expected }) => {
