@@ -4,7 +4,7 @@ export function cleanInput(input: string): string[] {
     return input.toLowerCase().trim().split(/\s+/);
 }
 
-export function startREPL(state: State) {
+export async function startREPL(state: State) {
     const rl = state.readline
 
     rl.prompt();
@@ -25,7 +25,7 @@ export function startREPL(state: State) {
         }
         
         try {
-            command.callback(state);
+            await command.callback(state);
         } catch (err: unknown) {
             if (err instanceof Error) {
                 console.log(err.message);
