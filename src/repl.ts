@@ -15,9 +15,12 @@ export async function startREPL(state: State) {
             rl.prompt();
             return;
         }
+
         const userCommand = words[0];
-        const commands = state.commands;
-        const command = commands[userCommand];
+        const args = words.slice(1);
+
+        const command = state.commands[userCommand];
+
         if (!command) {
             console.log(`Unknown command: ${userCommand}. Type "help" for a list of commands.`);
             rl.prompt();
@@ -25,7 +28,7 @@ export async function startREPL(state: State) {
         }
         
         try {
-            await command.callback(state);
+            await command.callback(state, ...args);
         } catch (err: unknown) {
             if (err instanceof Error) {
                 console.log(err.message);

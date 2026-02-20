@@ -13,7 +13,8 @@ export type State = {
 export type CLICommand = {
     name: string;
     description: string;
-    callback: (state: State) => Promise<void>;
+    // Variadic parameter (..args) are treated as optional
+    callback: (state: State, ...args: string[]) => Promise<void>;
 };
 
 export function initState(cacheInterval: number): State {

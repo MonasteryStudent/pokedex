@@ -54,9 +54,9 @@ export class PokeAPI {
       this.cache.add(url, location);      
       return location;
     } catch (e) {
-      throw new Error(
-        `Error fetching location "${locationName}": ${(e as Error).message}`
-      );
+        throw new Error(
+          `Error fetching location "${locationName}": ${(e as Error).message}`
+        );
     }
   }
 }
