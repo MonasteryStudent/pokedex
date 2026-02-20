@@ -2,11 +2,11 @@ import { State } from "./state.js"
 
 export async function commandCatch(state: State, ...args: string[]): Promise<void> {
     if (args.length !== 1) {
-        throw new Error("you must provide a Pokemon name");
+        throw new Error("you must provide a pokemon name");
     }
     const name = args[0]
     const pokemon = await state.pokeapi.fetchPokemon(name);
-    console.log(`Throwing a Pokeball at ${pokemon.name}...`);
+    console.log(`throwing a pokeball at ${pokemon.name}...`);
     if (catchPokemon(pokemon.base_experience)) {
         console.log(`${pokemon.name} was caught!`)
         state.pokedex[pokemon.name] = pokemon;
