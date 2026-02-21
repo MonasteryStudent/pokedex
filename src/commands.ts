@@ -32,17 +32,17 @@ export function getCommands(): Record<string, CLICommand> {
         },
         explore: {
             name: "explore",
-            description: "explore <location name>",
+            description: "List all Pokemon of a given location: explore <location name>",
             callback: commandExplore,
         },
         catch: {
             name: "catch",
-            description: "catch <pokemon name>",
+            description: "Catch a Pokemon (some might be harder to catch!): catch <pokemon name>",
             callback: commandCatch,
         },
         inspect: {
             name: "inspect",
-            description: "inspect <pokemon name>",
+            description: "Inspect a caught Pokemon in your Pokedex: inspect <pokemon name>",
             callback: commandInspect,
         },
         pokedex: {
